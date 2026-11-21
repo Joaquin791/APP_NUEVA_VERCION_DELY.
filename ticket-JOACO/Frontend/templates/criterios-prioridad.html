@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Etapas de entrega de un pedido en Dely."
+    >
+
+    <title>Estados de entrega | Dely</title>
+
+    <link rel="stylesheet" href="../css/estilos.css?v=2">
+
+</head>
+
+<body class="dely-app">
+    <header class="dely-app__encabezado">
+        <h1 class="dely-app__titulo">Estados de entrega</h1>
+
+        <nav class="dely-app__nav">
+            <a class="dely-app__enlace" href="repartidor.html">
+                Volver a mis pedidos
+            </a>
+        </nav>
+    </header>
+
+    <main class="dely-app__principal">
+        <section class="dely-app__tarjeta" aria-labelledby="introduccion">
+            <h2 class="dely-app__subtitulo" id="introduccion">
+                ¿Qué son los estados de entrega?
+            </h2>
+
+            <p>
+                Cada pedido pasa por tres etapas que indican su
+                progreso, desde que se registra hasta que llega al
+                cliente.
+            </p>
+
+            <p>
+                Los estados avanzan siempre en el mismo orden y los
+                cambia una persona de forma manual: el encargado o
+                el repartidor asignado.
+            </p>
+        </section>
+
+        <section class="dely-app__tarjeta" aria-labelledby="estado-preparacion">
+            <h2 class="dely-app__subtitulo" id="estado-preparacion">En preparación</h2>
+
+            <p>
+                Es el estado inicial de todo pedido nuevo.
+            </p>
+
+            <p>
+                Significa que el negocio está preparando el pedido
+                para poder enviarlo.
+            </p>
+        </section>
+
+        <section class="dely-app__tarjeta" aria-labelledby="estado-camino">
+            <h2 class="dely-app__subtitulo" id="estado-camino">En camino</h2>
+
+            <p>
+                Significa que el repartidor salió a realizar la
+                entrega.
+            </p>
+
+            <p>
+                Solo se puede pasar a este estado desde
+                «En preparación».
+            </p>
+        </section>
+
+        <section class="dely-app__tarjeta" aria-labelledby="estado-entregado">
+            <h2 class="dely-app__subtitulo" id="estado-entregado">Entregado</h2>
+
+            <p>
+                Significa que el pedido llegó al cliente.
+            </p>
+
+            <p>
+                Solo se puede pasar a este estado desde «En camino».
+                Un pedido entregado ya no admite más cambios de
+                estado.
+            </p>
+        </section>
+
+        <section class="dely-app__tarjeta" aria-labelledby="recomendacion">
+            <h2 class="dely-app__subtitulo" id="recomendacion">Recomendación final</h2>
+
+            <p>
+                Antes de cambiar el estado, comprobá que el pedido
+                esté realmente en la etapa que vas a marcar.
+            </p>
+
+            <p>
+                El orden es siempre el mismo: En preparación, En
+                camino y Entregado. No se puede volver atrás.
+            </p>
+        </section>
+    </main>
+
+    <footer class="dely-app__pie">
+        <p>Dely - Gestión de pedidos y entregas</p>
+    </footer>
+</body>
+</html>

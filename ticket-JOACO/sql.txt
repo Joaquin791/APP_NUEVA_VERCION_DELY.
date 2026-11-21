@@ -1,0 +1,39 @@
+
+============================================================================
+DELY — ESQUEMA ORIGINAL DE TICKET-JOACO
+ESTADO: HISTÓRICO — NO EJECUTAR
+============================================================================
+
+DESCRIPCIÓN:
+
+Este archivo contiene el esquema SQL original de la plantilla Ticket-JOACO
+utilizada como punto de partida para el desarrollo de Dely.
+
+El esquema corresponde a una versión anterior del proyecto y no representa
+la estructura actual de la base de datos.
+
+DIFERENCIAS CON DELY:
+
+- La tabla tickets fue reemplazada por pedidos.
+- Se incorporaron los roles encargado y repartidor.
+- Se eliminó el sistema de prioridades.
+- Se incorporó la asignación de pedidos a repartidores.
+- Se incorporó el historial de pedidos.
+- Se actualizaron las relaciones y estructuras de la base de datos.
+
+ESTRUCTURA ACTUAL:
+
+La estructura vigente se encuentra en:
+
+database/init.sql
+
+IMPORTANTE:
+
+NO ejecutar el SQL original de este archivo sobre la base de datos dely.
+
+Se conserva exclusivamente como referencia histórica de la plantilla
+utilizada durante el desarrollo.
+
+============================================================================
+FIN DEL DOCUMENTO HISTÓRICO
+============================================================================

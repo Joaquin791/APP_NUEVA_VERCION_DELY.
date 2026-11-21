@@ -1,0 +1,39 @@
+
+-- ============================================================================
+-- DELY — B05: Migración del rol docente a repartidor
+-- ESTADO: HISTÓRICA — NO EJECUTAR
+-- ============================================================================
+
+-- DESCRIPCIÓN:
+-- Este archivo documenta una migración realizada durante el desarrollo
+-- de Dely, cuando el rol 'docente' fue reemplazado por 'repartidor'.
+--
+-- La migración original modificaba el ENUM de la columna usuarios.rol,
+-- convertía los registros existentes de 'docente' a 'repartidor' y
+-- posteriormente eliminaba el rol antiguo.
+--
+-- ESTADO ACTUAL:
+-- La estructura vigente de Dely ya utiliza únicamente los siguientes roles:
+--
+--   - encargado
+--   - repartidor
+--
+-- La definición actual se encuentra en:
+--   database/init.sql
+--
+-- Por lo tanto, esta migración ya no es necesaria.
+--
+-- IMPORTANTE:
+--   - NO ejecutar este archivo.
+--   - NO modificar la columna usuarios.rol con estas instrucciones.
+--   - NO repetir la conversión de roles.
+--   - NO utilizar este archivo para instalar Dely desde cero.
+--
+-- La base de datos actual debe crearse utilizando database/init.sql.
+--
+-- Este archivo se conserva únicamente como registro histórico del
+-- desarrollo y de los cambios realizados durante B05.
+--
+-- ============================================================================
+-- FIN DEL REGISTRO HISTÓRICO B05
+-- ============================================================================

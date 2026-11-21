@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mis pedidos | Dely</title>
+
+    <link rel="stylesheet" href="../css/estilos.css?v=2">
+
+    <script src="../js/repartidor.js" defer></script>
+
+</head>
+
+<body class="dely-app">
+    <header class="dely-app__encabezado">
+        <h1 class="dely-app__titulo">Mis pedidos asignados</h1>
+
+        <button class="dely-app__boton dely-app__boton--claro" id="boton-logout" type="button">
+            Cerrar sesión
+        </button>
+    </header>
+
+    <main class="dely-app__principal">
+        <section class="dely-app__tarjeta">
+            <h2 class="dely-app__subtitulo" id="titulo-formulario">Cambiar estado</h2>
+
+            <form id="formulario-pedido">
+                <input
+                    type="hidden"
+                    id="id-pedido"
+                >
+
+                <p class="dely-app__resumen" id="resumen-pedido">
+                    Seleccioná un pedido de la lista para cambiar su estado.
+                </p>
+
+                <div class="dely-app__campo">
+                    <label class="dely-app__etiqueta" for="estado">Estado</label>
+
+                    <select class="dely-app__input" id="estado" required>
+                        <option value="">
+                            Selecciona un estado
+                        </option>
+                    </select>
+                </div>
+
+                <p class="dely-app__error" id="mensaje-error" role="alert" hidden></p>
+                <p class="dely-app__exito" id="mensaje-exito" role="status" hidden></p>
+
+                <button class="dely-app__boton" type="submit">
+                    Guardar estado
+                </button>
+
+                <button
+                    class="dely-app__boton dely-app__boton--secundario" id="boton-cancelar"
+                    type="button"
+                    hidden
+                >
+                    Cancelar
+                </button>
+            </form>
+        </section>
+
+        <section class="dely-app__tarjeta">
+            <h2 class="dely-app__subtitulo">Pedidos asignados</h2>
+
+            <div class="dely-app__tabla-contenedor">
+                <table class="dely-app__tabla">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="lista-pedidos"></tbody>
+                </table>
+            </div>
+
+            <p class="dely-app__vacio" id="sin-pedidos" hidden>
+                No tenés pedidos asignados.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

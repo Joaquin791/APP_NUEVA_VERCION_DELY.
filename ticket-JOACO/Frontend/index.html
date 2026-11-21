@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Dely - Inicia sesión para acceder a tu cuenta."
+    >
+
+    <title>Iniciar sesión | Dely</title>
+
+    <link rel="stylesheet" href="css/estilos.css?v=2">
+
+    <script src="js/login.js" defer></script>  <!--el defer hace que el codigo js se cargue desde el inicio-->
+
+</head>
+
+<body class="dely-login">
+    <main class="dely-login__contenedor">
+        <section
+            class="dely-login__tarjeta"
+            aria-labelledby="titulo-login"
+        >
+            <header class="dely-login__marca">
+                <p class="dely-login__logo" aria-hidden="true">
+                    Dely<span class="dely-login__punto">.</span>
+                </p>
+
+                <h1 id="titulo-login">
+                    Iniciar sesión
+                </h1>
+
+                <p class="dely-login__subtitulo">
+                    Ingresa con tu cuenta para continuar.
+                </p>
+            </header>
+
+            <form id="formulario-login">
+                <div class="dely-login__campo">
+                    <label
+                        class="dely-login__etiqueta"
+                        for="usuario"
+                    >
+                        Usuario
+                    </label>
+
+                    <input
+                        class="dely-login__input"
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        maxlength="50"
+                        autocomplete="username"
+                        placeholder="Tu nombre de usuario"
+                        required
+                    >
+                </div>
+
+                <div class="dely-login__campo">
+                    <label
+                        class="dely-login__etiqueta"
+                        for="password"
+                    >
+                        Contraseña
+                    </label>
+
+                    <input
+                        class="dely-login__input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        autocomplete="current-password"
+                        placeholder="Tu contraseña"
+                        required
+                    >
+                </div>
+
+                <p
+                    id="mensaje-error"
+                    class="dely-login__error"
+                    role="alert"
+                    hidden
+                ></p>
+
+                <button
+                    class="dely-login__boton"
+                    type="submit"
+                >
+                    Iniciar sesión
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="dely-login__pie">
+        <p>Dely · Acceso seguro</p>
+    </footer>
+</body>
+</html>

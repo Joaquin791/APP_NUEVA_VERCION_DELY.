@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gestión de pedidos | Dely</title>
+
+    <link rel="stylesheet" href="../css/estilos.css?v=2">
+
+    <script src="../js/encargado.js" defer></script>
+
+</head>
+
+<body class="dely-app">
+    <header class="dely-app__encabezado">
+        <h1 class="dely-app__titulo">Gestión de pedidos</h1>
+
+        <nav class="dely-app__nav">
+            <a class="dely-app__enlace" href="crear-usuario.html">
+                Crear usuario
+            </a>
+
+            <a class="dely-app__enlace" href="criterios-prioridad.html">
+                Estados de entrega
+            </a>
+
+            <button class="dely-app__boton dely-app__boton--claro" id="boton-logout" type="button">
+                Cerrar sesión
+            </button>
+        </nav>
+    </header>
+
+    <main class="dely-app__principal">
+        <section class="dely-app__tarjeta">
+            <h2 class="dely-app__subtitulo" id="titulo-formulario">
+                Crear pedido
+            </h2>
+
+            <form id="formulario-pedido">
+                <input
+                    type="hidden"
+                    id="id-pedido"
+                >
+
+                <div class="dely-app__campo">
+                    <label class="dely-app__etiqueta" for="cliente">
+                        Cliente
+                    </label>
+
+                    <input class="dely-app__input"
+                        type="text"
+                        id="cliente"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div class="dely-app__campo">
+                    <label class="dely-app__etiqueta" for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input class="dely-app__input"
+                        type="tel"
+                        id="telefono"
+                        maxlength="20"
+                        required
+                    >
+                </div>
+
+                <div class="dely-app__campo">
+                    <label class="dely-app__etiqueta" for="direccion">
+                        Dirección
+                    </label>
+
+                    <input class="dely-app__input"
+                        type="text"
+                        id="direccion"
+                        maxlength="255"
+                        required
+                    >
+                </div>
+
+                <div class="dely-app__campo">
+                    <label class="dely-app__etiqueta" for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea class="dely-app__input"
+                        id="descripcion"
+                        maxlength="2000"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="dely-app__campo" id="contenedor-estado" hidden>
+                    <label class="dely-app__etiqueta" for="estado">Estado</label>
+
+                    <select class="dely-app__input" id="estado">
+                        <option value="">
+                            Selecciona un estado
+                        </option>
+                    </select>
+                </div>
+
+                <div class="dely-app__campo" id="contenedor-repartidor" hidden>
+                    <label class="dely-app__etiqueta" for="repartidor">Repartidor</label>
+
+                    <select class="dely-app__input" id="repartidor">
+                        <option value="">
+                            Sin asignar
+                        </option>
+                    </select>
+                </div>
+
+                <p class="dely-app__error" id="mensaje-error" role="alert" hidden></p>
+                <p class="dely-app__exito" id="mensaje-exito" role="status" hidden></p>
+
+                <button class="dely-app__boton" type="submit">
+                    Crear pedido
+                </button>
+
+                <button
+                    class="dely-app__boton dely-app__boton--secundario" id="boton-cancelar"
+                    type="button"
+                    hidden
+                >
+                    Cancelar modificación
+                </button>
+            </form>
+        </section>
+
+        <section class="dely-app__tarjeta">
+            <h2 class="dely-app__subtitulo">Todos los pedidos</h2>
+
+            <div class="dely-app__tabla-contenedor">
+                <table class="dely-app__tabla">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                            <th>Repartidor</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="lista-pedidos"></tbody>
+                </table>
+            </div>
+
+            <p class="dely-app__vacio" id="sin-pedidos" hidden>
+                No existen pedidos registrados.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
